@@ -7,3 +7,5 @@ export { LoveDeclaration } from "./LoveDeclaration";
 export { Moments } from "./Moments";
 export { Timeline } from "./Timeline";
 export { NavDots } from "./NavDots";
+export { PostItsSection } from "./PostItsSection";
+export { SlotMachineSection } from "./SlotMachineSection";
