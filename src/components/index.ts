@@ -9,3 +9,5 @@ export { Timeline } from "./Timeline";
 export { NavDots } from "./NavDots";
 export { PostItsSection } from "./PostItsSection";
 export { SlotMachineSection } from "./SlotMachineSection";
+export { Constellation } from "./Constellation";
+export { default as Polaroids } from "./Polaroids";
