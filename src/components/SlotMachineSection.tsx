@@ -400,8 +400,6 @@ function Reel({ text, emoji, isComplemento, isSpinning, hasLanded, spinKey }: Re
 type Phase = "idle" | "spinning" | "landing" | "done";
 
 export function SlotMachineSection() {
-  const [acaoIdx, setAcaoIdx] = useState<number | null>(null);
-  const [compIdx, setCompIdx] = useState<number | null>(null);
   const [displayAcao, setDisplayAcao] = useState({ text: "...", emoji: "💫" });
   const [displayComp, setDisplayComp] = useState({ text: "..." });
   const [phase, setPhase] = useState<Phase>("idle");
@@ -443,8 +441,6 @@ export function SlotMachineSection() {
     const newComp = Math.floor(Math.random() * COMPLEMENTOS.length);
 
     addTimeout(() => {
-      setAcaoIdx(newAcao);
-      setCompIdx(newComp);
       setDisplayAcao(ACOES[newAcao]);
       setDisplayComp({ text: COMPLEMENTOS[newComp] });
       setPhase("landing");
