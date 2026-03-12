@@ -12,15 +12,16 @@ import {
   SlotMachineSection,
   Constellation,
   Polaroids,
+  BucketListSection,
   NavDots,
 } from "./components";
 
-const SECTION_IDS = ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9"];
+const SECTION_IDS = ["s0", "s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10"];
 
 export default function App() {
   const [revealed, setRevealed] = useState(false);
   const [activeSection, setActiveSection] = useState(0);
-  const total = revealed ? 10 : 1;
+  const total = revealed ? 11 : 1;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,6 +78,8 @@ export default function App() {
           <Constellation />
           <SectionDivider />
           <Polaroids />
+          <SectionDivider />
+          <BucketListSection />
         </>
       )}
     </>
