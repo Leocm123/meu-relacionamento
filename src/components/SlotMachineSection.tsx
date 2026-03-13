@@ -178,10 +178,28 @@ const css = `
     text-overflow: ellipsis;
     padding: 0 8px;
   }
+  @media (max-width: 600px) {
+    .slot-section .slot-reel-item {
+      white-space: normal;
+      text-align: center;
+      line-height: 1.35;
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+    .slot-section .slot-reel-item .slot-reel-text {
+      flex: 1;
+      min-width: 0;
+    }
+  }
 
   .slot-section .slot-reel-item .slot-reel-emoji {
     font-size: 22px;
     flex-shrink: 0;
+  }
+  .slot-section .slot-reel-item .slot-reel-text {
+    min-width: 0;
   }
 
   .slot-section .slot-reel-highlight {
@@ -331,9 +349,19 @@ const css = `
     color: var(--slot-rose-light);
   }
 
+  @media (max-width: 600px) {
+    .slot-section .slot-stage { padding: 60px 16px; }
+    .slot-section .slot-machine { padding: 24px 16px; max-width: 100%; }
+    .slot-section .slot-reel-wrap { height: auto; min-height: 72px; padding: 12px 0; }
+    .slot-section .slot-reel-wrap.slot-complemento { height: auto; min-height: 80px; }
+    .slot-section .slot-reel-track { padding: 0 16px; height: auto; min-height: 64px; align-items: center; }
+    .slot-section .slot-reel-wrap::before,
+    .slot-section .slot-reel-wrap::after { width: 20px; }
+  }
   @media (max-width: 520px) {
-    .slot-section .slot-machine { padding: 28px 20px; }
-    .slot-section .slot-reel-item { font-size: 14px; }
+    .slot-section .slot-machine { padding: 20px 14px; }
+    .slot-section .slot-reel-item { font-size: 15px; }
+    .slot-section .slot-reel-wrap.slot-complemento .slot-reel-item { font-size: 13px; }
   }
 `;
 
@@ -390,7 +418,7 @@ function Reel({ text, emoji, isComplemento, isSpinning, hasLanded, spinKey }: Re
       >
         <div className="slot-reel-item">
           {!isComplemento && emoji && <span className="slot-reel-emoji">{emoji}</span>}
-          <span>{text}</span>
+          <span className="slot-reel-text">{text}</span>
         </div>
       </div>
     </div>
