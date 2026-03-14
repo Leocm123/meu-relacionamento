@@ -200,7 +200,7 @@ export default function Polaroids() {
           <span className="polaroids-lbl">❤ para você</span>
           <h2 className="polaroids-ttl">Nossas <em>Fotos</em></h2>
           <div className="polaroids-divd"/>
-          <p className="polaroids-sub">as que eu mais amo — exatamente por serem assim</p>
+          <p className="polaroids-sub">as que eu mais amo, exatamente por serem assim</p>
         </div>
 
         <div className="polaroids-grid">

@@ -12,7 +12,7 @@ const REASONS = [
   { emoji: "🤭", text: "Suas brincadeiras bobas que me fazem rir muito, e me trazem uma felicidade que eu já não sabia mais que tinha." },
   { emoji: "💋", text: "Quando você me beija e fica com os olhos arregalados olhando para os meus." },
   { emoji: "💕", text: "Quando você fala que me ama. Toda vez. Como se fosse a primeira." },
-  { emoji: "🌸", text: "O seu cheiro, que eu não consigo comparar com nada — só sei que quando sinto, eu sei que é você." },
+  { emoji: "🌸", text: "O seu cheiro, que eu não consigo comparar com nada, só sei que quando sinto, eu sei que é você." },
 ];
 
 const COLORS = [
@@ -400,7 +400,7 @@ export function PostItsSection() {
               <div className="postits-finale">
                 <span className="postits-finale-heart">💕</span>
                 <p className="postits-finale-text">
-                  Essa lista nunca vai estar completa — porque todo dia que
+                  Essa lista nunca vai estar completa, porque todo dia que
                   passa, você me dá um motivo novo.
                 </p>
                 <p className="postits-finale-sig">— com todo o meu amor ❤</p>
